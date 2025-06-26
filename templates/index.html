@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Select a Genre</h1>
+    <form action="/recommendations" method="post">
+        <select name="genre">
+            <option value="hip-hop">Hip-Hop</option>
+            <option value="classical">Classical</option>
+            <option value="bollywood">Bollywood</option>
+        </select>
+        <label for="sort_by">Sort By:</label>
+        <select name="sort_by" id="sort_by">
+            <option value="popularity">Popularity</option>
+            <option value="listens">Most Listened</option>
+            <option value="likes">Most Liked</option>
+        </select>
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>
